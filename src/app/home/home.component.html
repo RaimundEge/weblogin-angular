@@ -1,0 +1,23 @@
+<div class="container">
+  <h3 class="display-3">Welcome to the Demo Web Application:</h3>
+  <p> {{ data.getMessage() }} </p>
+  <div>
+    <div *ngIf="data.user==''">
+      <p>
+        To access our valuable content you need to &nbsp;
+        <a routerLink="/signin">
+          <button>
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in</button>
+        </a>
+      </p>
+    </div>
+    <div *ngIf="data.user!=''">
+      <p>
+        You can proceed to our valuable content &nbsp;
+        <a routerLink="/content">
+          <button>content</button>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

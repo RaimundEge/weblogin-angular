@@ -1,0 +1,38 @@
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <strong class="navbar-brand default" style="color: white !important;">Angular Demo</strong>
+    </div>
+    <div class="navbar-collapse nav-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a routerLink="/home">Home</a>
+        </li>
+        <li>
+          <a routerLink="/content">Content</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="data.user==''">
+          <a routerLink="/signin">
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+            <span>&nbsp;Sign in</span>
+          </a>
+        </li>
+        <li *ngIf="data.user!=''">
+          <p class="navbar-text">{{ data.user }}</p>
+        </li>
+        <li *ngIf="data.user!=''">
+          <a (click)="logout()">
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

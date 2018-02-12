@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "mean"
+    "name": "DemoAngular"
   },
   "apps": [
     {
@@ -54,6 +54,10 @@
     }
   },
   "defaults": {
+    "serve": {
+      "port": 4200,
+      "host": "0.0.0.0"
+    },
     "styleExt": "css",
     "component": {}
   }
